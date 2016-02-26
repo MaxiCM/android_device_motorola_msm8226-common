@@ -33,6 +33,8 @@ if [ check_swappiness != 10 ]
 fi
 
 echo "8" > /proc/sys/vm/page-cluster;
+echo "100" > /proc/sys/vm/overcommit_ratio;
+echo "1" > /proc/sys/vm/overcommit_memory;
 echo "64000" > /proc/sys/kernel/msgmni;
 echo "64000" > /proc/sys/kernel/msgmax;
 echo "10" > /proc/sys/fs/lease-break-time;
